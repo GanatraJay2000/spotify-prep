@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useCallback, useMemo, useRef } from "react";
@@ -23,7 +24,7 @@ const PixelTrail: React.FC<PixelTrailProps> = ({
   pixelClassName,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const dimensions = useDimensions(containerRef);
+  const dimensions = useDimensions(containerRef as any);
   const trailId = useRef(uuidv4());
 
   const handleMouseMove = useCallback(
