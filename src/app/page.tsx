@@ -20,7 +20,7 @@ export default function Home() {
         </a>
       </div>
       <div className="h-screen relative flex justify-center items-center ">
-        <div className="mt-10 space-y-10 text-center text-4xl z-10 w-1/2 font-light text-neutral-200">
+        <div className="mt-10 space-y-10 text-center md:text-2xl lg:text-3xl xl:text-4xl z-10 lg:w-1/2 p-2 lg:p-0 font-light text-neutral-200">
           <div className="">
             From{" "}
             <LinkPreview
@@ -53,7 +53,7 @@ export default function Home() {
             that can simplify my life like{" "}
             <LinkPreview imageSrc="/images/tambola.png">
               <UnderlineToBackground
-                label="Musical Tambola"
+                label="Musical Tambola (Bingo)"
                 targetTextColor="#fff"
               />
             </LinkPreview>{" "}
