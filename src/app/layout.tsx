@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import FloatingMusic from "@/components/FloatingMusic";
+import GravityCursor from "@/components/gravity-cursor";
+import PixelTrail from "@/components/fancy/pixel-trail";
+import { mixReg } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +17,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${mixReg.className} antialiased dark`}>
         {children}
+        <div className="absolute top-0 w-full h-screen z-[-10] overflow-hidden">
+          <FloatingMusic />
+        </div>
+        <div className="absolute top-0 w-full h-screen z-[-10] overflow-hidden">
+          <GravityCursor />
+        </div>
+        <div className="fixed top-0 w-full h-screen overflow-hidden">
+          <PixelTrail
+            pixelSize={20}
+            delay={130}
+            fadeDuration={0}
+            pixelClassName="bg-[#1ed760]"
+          />
+        </div>
       </body>
     </html>
   );
