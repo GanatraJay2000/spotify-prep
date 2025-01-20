@@ -4,6 +4,7 @@ import { uiTitle } from "@/lib/fonts";
 import UnderlineToBackground from "@/components/fancy/underline-to-background";
 import { LinkPreview } from "@/components/fancy/link-preview";
 import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="text-white">
@@ -51,7 +52,10 @@ export default function Home() {
           <div>
             and whenever I get some time, I try to work on some side-projects
             that can simplify my life like{" "}
-            <LinkPreview imageSrc="/images/tambola.png">
+            <LinkPreview
+              imageSrc="/images/tambola.png"
+              url="https://www.jayganatra.com/project/musical-tambola-bingo-with-a-melodic-twist"
+            >
               <UnderlineToBackground
                 label="Musical Tambola (Bingo)"
                 targetTextColor="#fff"
@@ -61,7 +65,10 @@ export default function Home() {
               (1 of my first few projects)
             </span>{" "}
             - to{" "}
-            <LinkPreview imageSrc="/images/splitsmart.png">
+            <LinkPreview
+              imageSrc="/images/splitsmart.png"
+              url="https://www.jayganatra.com/project/split-smart"
+            >
               <UnderlineToBackground
                 label="SplitSmart"
                 targetTextColor="#fff"
