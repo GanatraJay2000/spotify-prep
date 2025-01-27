@@ -9,11 +9,14 @@ export default function Home() {
   return (
     <div className="text-white">
       <div className="h-screen flex flex-col justify-center items-center">
-        <a href="" className="text-7xl font-light z-10">
+        <a
+          href=""
+          className="text-4xl md:text-6xl 2xl:text-7xl p-4 md:p-0  font-light z-10"
+        >
           <Typewriter
             text={["Excited to Interview for the Band!"]}
             speed={100}
-            className={`text-white bg-black/70 px-5 py-2 rounded font-black !tracking-wide [word-spacing:5px] ${uiTitle.className}`}
+            className={`text-white bg-black/70 px-5 py-2 rounded font-black !tracking-wide [word-spacing:5px] [line-height:3.5rem] ${uiTitle.className}`}
             waitTime={1500}
             deleteSpeed={40}
             cursorChar={"_"}
